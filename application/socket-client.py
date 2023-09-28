@@ -1,12 +1,12 @@
 import socket
 
+PORT = 5000
 
 def main():
     host = socket.gethostname()
-    port = 5001
 
     client_socket = socket.socket()
-    client_socket.connect((host, port))
+    client_socket.connect((host, PORT))
 
     message = input('--> ')
     while message.lower().strip() != 'exit':
